@@ -1,0 +1,52 @@
+{
+  "branches": [
+    {
+      "name": "release",
+      "channel": "latest",
+      "type": "release"
+    },
+    {
+      "name": "dev",
+      "prerelease": "beta"
+    }
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/changelog", {
+      "changelogFile": "Assets/Tool/CHANGELOG.md"
+    }],
+    ["semantic-release-replace-plugin", {
+        "replacements": [
+          {
+            "files": ["Assets/Tool/package.json"],
+            "from": "\"version\": \".*?\"",
+            "to": "\"version\": \"${nextRelease.version}\"",
+            "results": [
+              {
+                "file": "Assets/Tool/package.json",
+                "hasChanged": true,
+                "numMatches": 1,
+                "numReplacements": 1
+              }
+            ],
+            "countMatches": true
+          }
+        ]
+    }],
+    ["@iam1337/create-unitypackage", {
+      "packageRoot": "Assets/Tool",
+      "projectRoot": "./",
+      "output": "PurrNet_Tool_${nextRelease.version}.unitypackage"
+    }],
+    ["@semantic-release/git", {
+        "assets": ["Assets/Tool/package.json", "Assets/Tool/CHANGELOG.md"],
+        "message": "ci(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }],
+    ["@semantic-release/github", {
+      "assets": [
+        {"path": "PurrNet_Tool_${nextRelease.version}.unitypackage", "label": "PurrNet_Tool_${nextRelease.version}.unitypackage"}
+      ]
+    }]
+  ]
+}

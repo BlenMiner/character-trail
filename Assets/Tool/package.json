@@ -1,0 +1,17 @@
+{
+  "name": "dev.purrnet.template",
+  "version": "1.0.0",
+  "author": {
+    "name": "PurrNet Team",
+    "url": "https://purrnet.dev/"
+  },
+  "description": "A tool template",
+  "displayName": "PurrTool",
+  "documentationUrl": "https://purrnet.gitbook.io/",
+  "hideInEditor": false,
+  "keywords": [
+    "purrnet",
+    "networking",
+    "multiplayer"
+  ]
+}
