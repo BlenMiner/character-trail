@@ -37,7 +37,7 @@
     ["@iam1337/create-unitypackage", {
       "packageRoot": "Assets/Tool",
       "projectRoot": "./",
-      "output": "PurrNet_Tool_${nextRelease.version}.unitypackage"
+      "output": "Character_Trail_${nextRelease.version}.unitypackage"
     }],
     ["@semantic-release/git", {
         "assets": ["Assets/Tool/package.json", "Assets/Tool/CHANGELOG.md"],
@@ -45,7 +45,7 @@
     }],
     ["@semantic-release/github", {
       "assets": [
-        {"path": "PurrNet_Tool_${nextRelease.version}.unitypackage", "label": "PurrNet_Tool_${nextRelease.version}.unitypackage"}
+        {"path": "Character_Trail_${nextRelease.version}.unitypackage", "label": "Character_Trail_${nextRelease.version}.unitypackage"}
       ]
     }]
   ]

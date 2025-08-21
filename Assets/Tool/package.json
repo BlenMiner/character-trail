@@ -1,17 +1,11 @@
 {
-  "name": "dev.purrnet.template",
+  "name": "dev.purrnet.character-trail",
   "version": "1.0.0",
   "author": {
-    "name": "PurrNet Team",
-    "url": "https://purrnet.dev/"
+    "name": "Valentin BORDEIANU",
+    "url": "https://github.com/BlenMiner"
   },
-  "description": "A tool template",
-  "displayName": "PurrTool",
-  "documentationUrl": "https://purrnet.gitbook.io/",
-  "hideInEditor": false,
-  "keywords": [
-    "purrnet",
-    "networking",
-    "multiplayer"
-  ]
+  "description": " Renders a trail but it's ghost copies of your character ",
+  "displayName": "Character Trail",
+  "hideInEditor": false
 }
