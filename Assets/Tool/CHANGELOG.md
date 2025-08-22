@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/BlenMiner/character-trail/compare/v1.0.0...v1.0.1) (2025-08-22)
+
+
+### Bug Fixes
+
+* emit boolean ([035e67b](https://github.com/BlenMiner/character-trail/commit/035e67bddc14e3a16f4776448d4875926f4bdb19))
+* GUID conflict with my other package ([9370b00](https://github.com/BlenMiner/character-trail/commit/9370b00fcf7b7b1c60faceda04d9316b00665b73))
+
 ## [1.0.1-beta.1](https://github.com/BlenMiner/character-trail/compare/v1.0.0...v1.0.1-beta.1) (2025-08-22)
 
 
