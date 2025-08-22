@@ -1,4 +1,4 @@
-## [1.0.1](https://github.com/BlenMiner/character-trail/compare/v1.0.0...v1.0.1) (2025-08-22)
+## [1.0.1-beta.1](https://github.com/BlenMiner/character-trail/compare/v1.0.0...v1.0.1-beta.1) (2025-08-22)
 
 
 ### Bug Fixes
