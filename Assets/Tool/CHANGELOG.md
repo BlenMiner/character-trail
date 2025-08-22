@@ -1,3 +1,10 @@
+# [1.0.0-beta.3](https://github.com/BlenMiner/character-trail/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2025-08-22)
+
+
+### Bug Fixes
+
+* add icon to make the component stand out a bit ([ca55ccb](https://github.com/BlenMiner/character-trail/commit/ca55ccb4927e839fb273bd4945d04712943c4821))
+
 # [1.0.0-beta.2](https://github.com/BlenMiner/character-trail/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2025-08-22)
 
 
