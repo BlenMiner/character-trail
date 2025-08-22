@@ -13,7 +13,9 @@ namespace Riten.CharacterTrail
         [SerializeField] private bool _autoFindChildren = true;
         [SerializeField] private Material _material;
         [SerializeField] private int _layer;
+
         [Header("Emit Settings")]
+        [SerializeField] private bool _emit = true;
         [SerializeField] private float _duration = 1f;
         [SerializeField] private float _rateOverTime = -1;
         [SerializeField] private float _rateOverDistance = 1f;
@@ -29,6 +31,12 @@ namespace Riten.CharacterTrail
 
         private Vector3 _lastPosition;
         private float _lastTimeEmission;
+
+        public bool emit
+        {
+            get { return _emit; }
+            set { _emit = value; }
+        }
 
         private Mesh GetMesh()
         {
@@ -113,23 +121,26 @@ namespace Riten.CharacterTrail
 
         private void Update()
         {
-            if (_rateOverTime > 0)
+            if (emit)
             {
-                _lastTimeEmission += Time.deltaTime;
-                if (_lastTimeEmission >= _rateOverTime)
+                if (_rateOverTime > 0)
                 {
-                    Emit();
-                    _lastTimeEmission = 0;
+                    _lastTimeEmission += Time.deltaTime;
+                    if (_lastTimeEmission >= _rateOverTime)
+                    {
+                        Emit();
+                        _lastTimeEmission = 0;
+                    }
                 }
-            }
 
-            if (_rateOverDistance > 0)
-            {
-                var distance = Vector3.Distance(_lastPosition, transform.position);
-                if (distance >= _rateOverDistance)
+                if (_rateOverDistance > 0)
                 {
-                    Emit();
-                    _lastPosition = transform.position;
+                    var distance = Vector3.Distance(_lastPosition, transform.position);
+                    if (distance >= _rateOverDistance)
+                    {
+                        Emit();
+                        _lastPosition = transform.position;
+                    }
                 }
             }
 
