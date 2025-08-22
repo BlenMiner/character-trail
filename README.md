@@ -8,6 +8,12 @@ Very simple interface and concise code.
 
 <img width="506" height="278" alt="Screenshot_5" src="https://github.com/user-attachments/assets/547faaea-8c66-438b-9d4a-b3436d08bc82" />
 
+## Install
+
+```bash
+https://github.com/BlenMiner/character-trail.git?path=/Assets/Tool#release
+```
+
 ## Discord
 
 <a href="https://discord.gg/HnNKdkq9ta" target="_blank">
